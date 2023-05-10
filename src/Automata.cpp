@@ -25,15 +25,16 @@ int Automata::coin(int cash) {
   this->cash += cash;
   state = ACCEPT;
   return 0;
-  } else return cash;
+  } else 
+  return cash;
 }
 
 void Automata::choice(int ch) {
-  if (state == ACCEPT) {
-  if (ch <= 4) {
-   this->ch = ch;
-   state = CHECK;
-   check();
+ if (state == ACCEPT) {
+ if (ch <= 4) {
+  this->ch = ch;
+  state = CHECK;
+  check();
   }
   }
 }
