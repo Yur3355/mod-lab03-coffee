@@ -4,39 +4,35 @@
 
 
 Automata::Automata() {
- state = OFF;
- cash = 0;
- ch = -1;
+  state = OFF;
+  cash = 0;
+  ch = -1;
 }
 void Automata::on() {
- if (state == OFF)
- {
+  if (state == OFF)
+  {
   state = WAIT;
- }
+  }
 }
 
 void Automata::off() {
- if (state == WAIT)
- {
+  if (state == WAIT)
+  {
   state = OFF;
- }
+  }
 }
 
 int Automata::coin(int cash) {
- if (state == WAIT || state == ACCEPT)
- {
+  if (state == WAIT || state == ACCEPT) {
   this->cash += cash;
   state = ACCEPT;
   return 0;
- }
- else return cash;
+  } else return cash;
 }
 
 void Automata::choice(int ch) {
- if (state == ACCEPT)
- {
-  if (ch <= 4)
-  {
+  if (state == ACCEPT) {
+  if (ch <= 4) {
    this->ch = ch;
    state = CHECK;
    check();
@@ -45,8 +41,7 @@ void Automata::choice(int ch) {
 }
 
 void Automata::check() {
- if (state == CHECK)
- {
+ if (state == CHECK) {
   if (cash - prices[ch] >= 0)
   cook();
   else state = ACCEPT;
@@ -54,8 +49,7 @@ void Automata::check() {
 }
 
 int Automata::cancel() {
- if (state == ACCEPT || state == CHECK || state == WAIT)
- {
+ if (state == ACCEPT || state == CHECK || state == WAIT) {
   state = WAIT;
   int refund = cash;
   cash = 0;
@@ -65,15 +59,13 @@ int Automata::cancel() {
 }
 
 void Automata::cook() {
- if (state == CHECK)
- {
+ if (state == CHECK) {
   state = COOK;
  }
 }
 
 string Automata::finish() {
- if (state == COOK)
- {
+ if (state == COOK) {
   cash -= prices[ch];
   state = WAIT;
   string drink = menu[ch];
@@ -90,4 +82,3 @@ string* Automata::etMenu() {
 Automata::State Automata::getState() {
  return state;
 }
-

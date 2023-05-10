@@ -9,8 +9,7 @@ using namespace std;
 
 class Automata {
  private:
- enum State
- {
+  enum State {
   OFF,
   WAIT,
   ACCEPT,
@@ -19,8 +18,8 @@ class Automata {
  };
   int cash;
   int ch;
-  string menu[4] = { "Latte" ,"Cappuccino","Espresso","Americano" };
-  int prices[4] = { 80,100,120,140 };
+  string menu[4] = { "Latte" , "Cappuccino" , "Espresso" , "Americano" };
+  int prices[4] = { 80 , 100 , 120 , 140 };
   State state;
   void cook();
   void check();
