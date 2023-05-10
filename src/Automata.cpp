@@ -25,9 +25,9 @@ int Automata::coin(int cash) {
   this->cash += cash;
   state = ACCEPT;
   return 0;
-  } 
-  else
-  return cash;
+  } else {
+	  return cash;
+  }
 }
 
 void Automata::choice(int ch) {
@@ -55,9 +55,9 @@ int Automata::cancel() {
   int refund = cash;
   cash = 0;
   return refund;
-  } 
-  else
+  } else {
   return 0;
+  }
 }
 
 void Automata::cook() {
