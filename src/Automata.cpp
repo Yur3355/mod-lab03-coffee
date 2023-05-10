@@ -30,8 +30,8 @@ int Automata::coin(int cash) {
 }
 
 void Automata::choice(int ch) {
- if (state == ACCEPT) {
- if (ch <= 4) {
+  if (state == ACCEPT) {
+  if (ch <= 4) {
   this->ch = ch;
   state = CHECK;
   check();
@@ -40,44 +40,44 @@ void Automata::choice(int ch) {
 }
 
 void Automata::check() {
- if (state == CHECK) {
+  if (state == CHECK) {
   if (cash - prices[ch] >= 0)
   cook();
   else state = ACCEPT;
- }
+  }
 }
 
 int Automata::cancel() {
- if (state == ACCEPT || state == CHECK || state == WAIT) {
+  if (state == ACCEPT || state == CHECK || state == WAIT) {
   state = WAIT;
   int refund = cash;
   cash = 0;
   return refund;
- }
+  }
  else return 0;
 }
 
 void Automata::cook() {
- if (state == CHECK) {
+  if (state == CHECK) {
   state = COOK;
- }
+  }
 }
 
 string Automata::finish() {
- if (state == COOK) {
+  if (state == COOK) {
   cash -= prices[ch];
   state = WAIT;
   string drink = menu[ch];
   ch = -1;
   return drink;
- }
- return "";
+  }
+  return "";
 }
 
 string* Automata::etMenu() {
- return menu;
+  return menu;
 }
 
 Automata::State Automata::getState() {
- return state;
+  return state;
 }
