@@ -25,8 +25,9 @@ int Automata::coin(int cash) {
   this->cash += cash;
   state = ACCEPT;
   return 0;
-  } else 
-  return cash;
+  }
+  else return
+  cash;
 }
 
 void Automata::choice(int ch) {
@@ -43,7 +44,8 @@ void Automata::check() {
   if (state == CHECK) {
   if (cash - prices[ch] >= 0)
   cook();
-  else state = ACCEPT;
+  else
+  state = ACCEPT;
   }
 }
 
@@ -54,7 +56,8 @@ int Automata::cancel() {
   cash = 0;
   return refund;
   }
- else return 0;
+  else return
+  0;
 }
 
 void Automata::cook() {
