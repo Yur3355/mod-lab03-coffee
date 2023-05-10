@@ -87,3 +87,4 @@ string* Automata::etMenu() {
 Automata::State Automata::getState() {
 	return state;
 }
+

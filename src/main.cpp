@@ -8,3 +8,4 @@ int main()
     Automata a = Automata();
 
 }
+
