@@ -1,7 +1,9 @@
 // Copyright 2022 Vizgalov Y
 
 #include <string>
+
 using namespace std;
+
 class Automata {
 
 private:
