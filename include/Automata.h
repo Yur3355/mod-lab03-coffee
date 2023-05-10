@@ -1,6 +1,6 @@
 // Copyright 2022 GHA Test Team
 #ifndef INCLUDE_AUTOMATA_H_
-#endif  INCLUDE_AUTOMATA_H_
+#endif // INCLUDE_AUTOMATA_H_
 #define INCLUDE_AUTOMATA_H_
 
 #include <string>
