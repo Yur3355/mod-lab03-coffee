@@ -1,4 +1,5 @@
-// Copyright 2022 GHA Test Team
+// Copyright 2022 Vizgalov Y
+
 #include "Automata.h"
 
 int main()
