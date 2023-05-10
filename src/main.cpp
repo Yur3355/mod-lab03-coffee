@@ -2,10 +2,8 @@
 
 #include "Automata.h"
 
-int main()
-{
+int main() {
 
-    Automata a = Automata();
+ Automata a = Automata();
 
 }
-
