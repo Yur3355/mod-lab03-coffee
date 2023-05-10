@@ -26,7 +26,7 @@ int Automata::coin(int cash) {
   state = ACCEPT;
   return 0;
   } else {
-	  return cash;
+  return cash;
   }
 }
 
