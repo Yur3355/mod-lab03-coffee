@@ -5,7 +5,7 @@
 
 #include <string>
 
-using namespace std;
+using std::string;
 
 class Automata {
  private:
@@ -15,7 +15,7 @@ class Automata {
   ACCEPT,
   CHECK,
   COOK
- };
+  };
   int cash;
   int ch;
   string menu[4] = { "Latte" , "Cappuccino" , "Espresso" , "Americano" };

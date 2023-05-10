@@ -9,15 +9,13 @@ Automata::Automata() {
   ch = -1;
 }
 void Automata::on() {
-  if (state == OFF)
-  {
+  if (state == OFF) {
   state = WAIT;
   }
 }
 
 void Automata::off() {
-  if (state == WAIT)
-  {
+  if (state == WAIT) {
   state = OFF;
   }
 }
@@ -37,7 +35,7 @@ void Automata::choice(int ch) {
    state = CHECK;
    check();
   }
- }
+  }
 }
 
 void Automata::check() {
